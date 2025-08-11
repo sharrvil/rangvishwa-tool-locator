@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rangvishwa - Tool Storage Database</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo-circle">
+                    <img src="images/logo.png" alt="Rangvishwa" class="custom-logo">
+                </div>
+            </div>
+            <p class="subtitle">TOOL STORAGE DATABASE</p>
+        </header>
+
+        <main class="main-content">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Enter Unique Code" class="search-input">
+                    <button id="searchTSBtn" class="search-button">
+                        <span class="material-icons">search</span>
+                        <span class="button-text">Search by Unique Code</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="results-container" id="resultsContainer">
+                <div class="no-results" id="noResults">
+                    <div class="no-results-icon">
+                        <span class="material-icons">find_in_page</span>
+                    </div>
+                    <h3>No part selected</h3>
+                    <p>Enter a unique code above to view details</p>
+                </div>
+                <div class="results-table" id="resultsTable"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; <span id="currentYear"></span> Technospace Engineers. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading data...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
